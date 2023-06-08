@@ -1,20 +1,23 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
+const cc = require("./connection_config");
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "username",
-  password: "password",
-  database: "dbname",
- });
+  host: cc.host,
+  port: cc.port,
+  user: cc.user,
+  password: cc.password,
+  database: cc.database,
+});
 
 connection.connect((err) => {
   if (err) {
-    throw err;
-  } else {
-    console.log("Database connected already ...");
-connection.end();
-	
+    console.error("Error connecting to MySQL server:", err);
+    return;
   }
-});
 
+  console.log("Connected to MySQL server!");
+
+  // Perform your database operations here
+
+  connection.end();
+});
