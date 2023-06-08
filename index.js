@@ -1,22 +1,20 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-  host: "192.168.100.2",
+  host: "localhost",
   port: 3306,
-  user: "intUsr",
-  password: "123456",
-  database: "investo",
-  connectionLimit: 10,
-});
+  user: "username",
+  password: "password",
+  database: "dbname",
+ });
 
 connection.connect((err) => {
   if (err) {
-    console.log("SQL server is off");
     throw err;
   } else {
     console.log("Database connected already ...");
+connection.end();
 	
   }
 });
 
-connection.end();
