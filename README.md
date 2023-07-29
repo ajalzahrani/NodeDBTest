@@ -1,6 +1,4 @@
-Sure! Below is the updated README with the inclusion of the `connection_config` code:
-
-**README for Database Connection Scripts**
+**NodeDBTest**
 
 This repository contains Node.js scripts to establish database connections for both MySQL and Microsoft SQL Server (MSSQL). These scripts can be used to verify the connectivity to the respective databases and serve as a starting point for performing various database operations.
 
