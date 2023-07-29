@@ -14,10 +14,7 @@ connection.connect((err) => {
     console.error("Error connecting to MySQL server:", err);
     return;
   }
-
-  console.log("Connected to MySQL server!");
-
+  console.log("Connected to MySQL server successfully");
   // Perform your database operations here
-
   connection.end();
 });
